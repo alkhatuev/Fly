@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fly/main.dart';
 
 class SecondScreen extends StatelessWidget {
   @override
@@ -14,8 +15,10 @@ class SecondScreen extends StatelessWidget {
         children: <Widget>[
           Text('Передаю привет Flutter - разработчикам.', style: TextStyle(color: Colors.red, fontSize: 35.0),),
           Image.network('https://adukar.by/images/photo/programmist-razrabotchik.jpg'),
-
-
+          RaisedButton(onPressed: () { Navigator.of(context).pop(
+            MaterialPageRoute(builder: (context) => MainScreen()
+          ));},
+          )
         ],
       ),
       backgroundColor: Colors.white12,
